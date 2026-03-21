@@ -1,0 +1,112 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+
+/* top head section starts here */
+.tophead{
+    background-color: #141212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 100px;
+    width:100%;
+    height: 30px;
+    top: 0;
+}
+
+.tophead ul li{
+    color:white;
+    display:inline-block;
+    margin:0px 3px;
+    list-style: none;
+}
+
+.tophead ul li a{
+    text-decoration: none;
+    color:white;
+}
+
+/* Top head section ends here */
+
+/* Header section starts here */
+header{
+    width:100%;
+    height: 100px;
+    line-height: 100px;
+    background-color: green;
+    color:white;
+    padding: 0px 100px;
+    margin: auto;
+    top: 0;
+    
+}
+
+header h1{
+    font-size: 50px;
+    margin-right: 10px;
+}
+
+header h1, header h3{
+    display:inline-block;
+}
+
+/* header section ends here */
+
+/* navbar section starts */
+nav{
+    width:100%;
+    height:30px;
+    line-height: 30px;
+    background-color: #141212;
+    padding: 0px 100px;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 7px;
+}
+
+nav>ul>li>a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+nav ul li a:hover{
+    font-size: 105%;
+    transition: 0.3s linear;
+    background-color: yellow;
+    color:red;
+}
+/* navbar section ends */
+
+section{
+    width:100%;
+    padding: 0px 100px;
+}
+
+section main{
+    width:85%;
+    float:left;
+    padding-top: 20px;
+}
+
+section aside{
+    width:15%;
+    float:right;
+    background-color: gray;
+    padding:20px 15px;
+}
+
+aside ul li{
+    list-style: none;
+}
+
+footer{
+    width:100%;
+    height: 50px;
+    background-color: green;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition-timing-function</title>
+    <style>
+        div{
+            height: 75px;
+            width: 75px;
+            background: yellowgreen;
+            color:red;
+            transition:width 5s;
+        }
+        #div1{
+            transition-timing-function: linear;
+        }
+         #div2{
+            transition-timing-function: ease;
+        }
+         #div3{
+            transition-timing-function: ease-in;
+        }
+         #div4{
+            transition-timing-function: ease-out;
+        }
+        div:hover{
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>The transition timing fucntion property</h1>
+    <p>This is an example of linear value in the transition-timing-function property</p>
+    <div id="div1">Linear</div>
+    <p>This is an example of ease value in the transition-timing-function property</p>
+    <div id="div2">ease</div>
+      <p>This is an example of ease-in value in the transition-timing-function property</p>
+    <div id="div3">ease-in</div>
+      <p>This is an example of ease-out in the transition-timing-function property</p>
+    <div id="div4">ease-out</div>
+</body>
+</html>

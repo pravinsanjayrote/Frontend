@@ -1,0 +1,12 @@
+.menubar li{
+    float:left;
+    list-style: none;
+    text-decoration: none;
+    margin-left: 80px;
+}
+
+.menubar li a{
+    padding:3px 3px;
+    text-decoration: none;
+    color: aliceblue;
+}
