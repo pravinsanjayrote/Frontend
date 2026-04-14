@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="mydiv">
+        <form>
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" name="name" id="name" placeholder="Name"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" name="email" id="email" placeholder="Email"></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="password" id="password" placeholder="Password"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" name="submit" id="submit" value="Submit" onclick="hello()"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script>
+        function hello() {
+            var c = confirm("Are you really want to perform this action?");
+            if (c) {
+                alert("You have given permission to perform this action!!!");
+            } else {
+                alert("You have cancelled your action...");
+            }
+        }
+    </script>
+</body>
+
+</html>

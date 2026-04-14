@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback2</title>
+</head>
+<body>
+    <script>
+        function hello1(){
+            document.write("Hello 1 function called...");
+            console.log("hello1 called.");
+        }
+        function hello2(){
+            document.write("Hello 2 Function called...");
+            console.log("hello2 called.");
+        }
+        setTimeout(()=>{
+            hello1();
+        },4000);
+        hello2();
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Example</title>
+
+    <!-- ✅ Include jQuery (Fix for $ is not defined) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<script>
+    // ✅ Function returning a Promise
+    function promise() {
+        return new Promise(function(resolve, reject) {
+
+            console.log("Work in progress... Please wait...");
+
+            // ✅ Valid API URL added
+            $.get("https://jsonplaceholder.typicode.com/posts/1", function(data) {
+
+                console.log("Data received:", data);
+
+                // ✅ Resolve the promise with data
+                resolve(data);
+
+            }).fail(function(error) {
+
+                console.log("Error occurred:", error);
+
+                // ✅ Reject on failure
+                reject("Failed to load JSON data");
+
+            });
+        });
+    }
+
+    // ✅ Calling the function
+    promise()
+        .then(function(result) {
+            console.log("Promise resolved successfully:");
+            console.log(result);
+        })
+        .catch(function(error) {
+            console.log("Promise rejected:");
+            console.log(error);
+        });
+
+</script>
+
+</body>
+</html>

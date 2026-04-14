@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let callFun = function(data,message){
+            return function(resolve,reject){
+                setTimeout(()=>{
+                    console.log(`The ${message} promise resolved`);
+                    resolve(data);
+                },2000);
+            }
+        };
+        let p1=new Promise(callFun(10,"First"));
+        let p2=new Promise(callFun(20,"second"));
+        let p3=new Promise(callFun(30,"third"));
+
+        var sum=0;
+        Promise.all([p1,p2,p3]).then((result)=>{
+            for(var i in result){
+                sum=sum+result[i];
+            }
+            console.log(result);
+            console.log(`sum is:${sum}`);
+            
+        })
+    </script>
+</body>
+</html>

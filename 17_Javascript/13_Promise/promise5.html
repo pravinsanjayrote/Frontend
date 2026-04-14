@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        let p1 = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                console.log("1st promise resolved!!");
+                resolve(10);
+            },4000);
+        });
+        let p2 = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                console.log("2nd promise resolved!!");
+                resolve(20);
+            },4000);
+        });
+        let p3 = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                console.log("3rd promise resolved!!");
+                resolve(30);
+            },4000);
+        });
+        var sum=0;
+        Promise.all([p1,p2,p3]).then((result)=>{
+            for(var i in result){
+                sum=sum+result[i];
+            }
+            console.log(result);
+            console.log(`sum is:${sum}`);
+        }).catch((error)=>{
+            console.log(error);
+        })
+    </script> -->
+
+    <script>
+        let p1 = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                console.log("1st promise resolved!!");
+                resolve(10);
+            },4000);
+        });
+        let p2 = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                console.log("2nd promise failed!!");
+                reject('Failed');
+            },4000);
+        });
+        let p3 = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                console.log("3rd promise resolved!!");
+                resolve(30);
+            },4000);
+        });
+        var sum=0;
+        Promise.all([p1,p2,p3]).then((result)=>{
+            for(var i in result){
+                sum=sum+result[i];
+            }
+            console.log(result);
+            console.log(`sum is:${sum}`);
+        }).catch((error)=>{
+            console.log(error);
+        })
+    </script>
+</body>
+</html>

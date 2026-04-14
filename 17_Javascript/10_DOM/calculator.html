@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="mydiv">
+        <h3>Arithmatic Calcuation</h3>
+        <input type="text" name="n1" id="n1" placeholder="Enter 1st Number"><br><br>
+        <input type="text" name="n2" id="n2" placeholder="Enter 2nd Number"><br><br>
+        <select name="operators" id="operators">
+            <option value="calculator">Calculator</option>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="/">/</option>
+            <option value="*">*</option>
+        </select>
+        <button onclick="calc()">=</button>
+        <input type="result" name="result" id="result" size="5">
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>

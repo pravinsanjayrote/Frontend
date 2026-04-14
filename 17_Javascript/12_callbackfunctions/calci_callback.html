@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calci_Callback</title>
+</head>
+<body>
+    <script>
+        function calci(a,b,doSomething){
+            return doSomething(a,b);
+        }
+        const add=calci(2,3,function(n1,n2){
+            return n1+n2;
+        });
+
+        const subs=calci(2,3,function(n1,n2){
+            return n1-n2;
+        });
+
+         const multi=calci(2,3,function(n1,n2){
+            return n1*n2;
+        });
+
+         const div=calci(2,3,function(n1,n2){
+            return n1/n2;
+        });
+
+        document.write("Sum is: "+add+"<br>");
+        document.write("subs is: "+subs+"<br>");
+        document.write("Mul is: "+multi+"<br>");
+        document.write("Div is: "+div+"<br>");
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback3</title>
+</head>
+<body>
+    <!-- <script>
+        function hello1(name,callBack){
+            console.log("hello..."+name);
+            callBack();
+        }
+        function hello2(){
+            console.log("hello2 called.");
+        }
+        setTimeout(()=>{
+            hello1("Pravin",hello2);
+        },5000);
+    </script> -->
+
+     <script>
+        function hello1(){
+            console.log("hello1 called...");
+        }
+        function hello2(){
+            console.log("hello2 called...");
+        }
+        hello2();
+        setTimeout(()=>{
+            hello1();
+        },3000);
+    </script>
+</body>
+</html>

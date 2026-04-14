@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single threaded env</title>
+</head>
+<body>
+    <!-- <script>
+        console.log("A");
+        console.log("B");
+        setTimeout(()=>{console.log("I will take 4 second to print...");
+        },3000);
+        console.log("C");
+        console.log("D");
+    </script> -->
+
+    <!-- <script>
+        function sum(x,y){
+            console.log(x+y);
+        }
+
+        function calciFun(x,y,sumCallBack){
+            sumCallBack(x,y);
+        }
+
+        calciFun(10,20,sum);
+    </script> -->
+
+<!-- <script>
+    function getStudentRoll(roll){
+        setTimeout(()=>{console.log(roll);
+        },2000);
+    }
+
+    getStudentRoll(1);
+    getStudentRoll(2);
+    getStudentRoll(3);
+    getStudentRoll(4);
+</script> -->
+
+    <script>
+    function getStudentRoll(roll,getNextRoll){
+        setTimeout(()=>{
+            console.log(roll);
+            if(getNextRoll){
+                getNextRoll();
+            }
+        },2000);
+    }
+
+    // getStudentRoll(1,()=>{
+    //     getStudentRoll(2);
+    // });
+
+    //   getStudentRoll(1,()=>{
+    //     getStudentRoll(2,()=>{
+    //         getStudentRoll(3);
+    //     });
+    // });
+
+    //   getStudentRoll(1,()=>{
+    //     getStudentRoll(2,()=>{
+    //         getStudentRoll(3,()=>{
+    //             getStudentRoll(4);
+    //         });
+    //     });
+    // });
+
+    getStudentRoll(1,()=>{
+        console.log("Searching 2nd student data");
+        getStudentRoll(2,()=>{
+            console.log("Searching 3rd student data");
+            getStudentRoll(3,()=>{
+                console.log("Searching 4th student data");
+                getStudentRoll(4);
+            });
+        });
+    });
+</script>
+</body>
+</html>
