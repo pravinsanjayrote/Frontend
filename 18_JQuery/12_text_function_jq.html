@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-4.0.0.js"
+        integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+    <title>text functions in JQ</title>
+    <style>
+        .mydiv {
+            border: 3px solid red;
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="mydiv" id="div1">
+        <h2 class="jq1">What is JQ?</h2>
+        <button id="jq">Answer of JQ</button>
+        <h2 class="css1">What is CSS?</h2>
+        <button id="css">Answer of CSS</button>
+        <h2 class="js2">What is JavaScript?</h2>
+        <button id="js">Answer of JS</button>
+    </div>
+    <script>
+
+        $(document).ready(function () {
+            $("#jq").click(function () {
+                $("#div1 .jq1").text("jq is a light weight JavaScript Library");
+                $("#div1 .jq1").css("color", "red");
+            });
+
+            $("#css").click(function () {
+                $("#div1 .css1").text("(css) is a style sheet language that describes how to present and format documents written in HTML.");
+                $("#div1 .css1").css("color", "blue");
+            });
+
+            $("#js").click(function () {
+                $("#div1 .js2").text("Javascript is a programming language that allows developers to create dynamic and interactive web pages.");
+                $("#div1 .js2").css("color", "green");
+            });
+        });
+    </script>
+</body>
+
+</html>

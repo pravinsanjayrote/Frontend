@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-4.0.0.js"
+        integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+    <title>text functions in JQ</title>
+    <style>
+        .mydiv {
+            border: 3px solid red;
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="mycontainer">
+        <div class="mydiv" id="mydiv1">This is first Comment</div>
+        <div class="mydiv" id="mydiv2">This is Second Comment</div>  
+    </div>
+    <div class="addcomment">
+        <input type="text" id="newcomment" name="newcomment" placeholder="Enter comment here!!"/>
+        <button id="addtotop">Add comment to Top</button>
+        <button id="addtoend">Add comment to End</button>
+    </div>
+    <script>
+
+        $(document).ready(function () {
+           $("#addtotop").click(function(){
+            let newcomment = $("#newcomment").val();
+            if(newcomment.trim()!=""){
+                $("#mycontainer").prepend('<div class="mydiv">' + newcomment + "</div");
+                $("#newcomment").val("");
+            }else{
+                alert("Enter comment...");
+            }
+           });
+
+           $("#addtoend").click(function(){
+            let newcomment = $("#newcomment").val();
+            if(newcomment.trim()!=""){
+                $("#mycontainer").append('<div class="mydiv">' + newcomment + "</div");
+                $("#newcomment").val("");
+            }else{
+                alert("Enter comment...");
+            }
+           })
+        });
+    </script>
+</body>
+
+</html>

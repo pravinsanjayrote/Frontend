@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Promise7</title>
 </head>
 <body>
-    
+    <script>
+        function getStudentRoll(roll){
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    console.log("roll is:",roll);
+                    resolve("Success");
+                },2000)
+            });
+        }
+        let s1 = getStudentRoll(10).then((result)=>{
+            console.log(result);
+        });
+        let s2 = getStudentRoll(20).then((result)=>{
+            console.log(result);
+        });
+        let s3 = getStudentRoll(30).then((result)=>{
+            console.log(result);
+        });
+    </script>
 </body>
 </html>

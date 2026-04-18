@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-4.0.0.js"
+        integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+    <title>add_remove_toggle_text</title>
+   <style>
+        .mydiv{
+            border: 3px solid red;
+            width:500px;
+        }
+
+        .firstchange{
+            color:green;
+        }
+
+        .secondchange{
+            color:cyan;
+        }
+    </style>
+</head>
+
+<body>
+     
+    <div id="div1" class="mydiv">
+        <h1>We are Learning JQ</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio fuga mollitia nobis nisi, dolore quae
+            recusandae odio optio tenetur at.</p>
+    </div>
+
+    <input type="button" value="Add Class" id="mybtn1"/>
+    <input type="button" value="Remove Class" id="mybtn2"/>
+    <input type="button" value="Add/Remove" id="mybtn3"/>
+
+    <script>
+        
+         $(document).ready(function () {
+            $("#mybtn1").click(function(){
+                $("#div1").addClass("firstchange");
+            });
+
+            $("#mybtn2").click(function(){
+                $("#div1").removeClass("firstchange");
+            });
+
+            $("#mybtn3").click(function(){
+                $("#div1").toggleClass("firstchange");
+            });
+        });
+
+        
+ 
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-4.0.0.js"
+        integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+    <title>form5</title>
+    <style>
+        .box {
+            border: 2px solid blue;
+            width: 300px;
+            height: 150px;
+            padding: 5px;
+            background-color: powderblue;
+            text-align: center;
+        }
+
+        .first {
+            background-color: aqua;
+        }
+
+        .second {
+            background-color: yellow;
+            color:red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>We are Learning JQ</h1>
+    <div id="mydiv1" class="box">
+        <h2>AAA BBB CCC</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio fuga mollitia nobis nisi, dolore quae
+            recusandae odio optio tenetur at.</p>
+    </div>
+    <br><br>
+    <button id="adbtn">Click Me</button>
+    <script>
+        
+        // $(document).ready(function () {
+        //    $('#adbtn').click(function(){
+        //     $('#mydiv1').css("background","pink");
+        //    });
+        // });
+
+         $(document).ready(function () {
+           $('#adbtn').click(function(){
+            $('#mydiv1').css({"background":"black","color":"red","border":"5px dotted green"});
+           });
+        });
+
+    </script>
+</body>
+
+</html>

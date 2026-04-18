@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-4.0.0.js"
+        integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+    <title>Stting text value in div</title>
+    <style>
+        #mydiv {
+            border: 3px solid red;
+            background-color: rgb(26, 27, 27);
+            color:rgb(18, 244, 97);
+            width: 150px;
+            margin:10px;
+        }
+    </style>
+</head>
+
+<body>
+   <div class="container">
+    <table bgcolor="cyan" bordercolor="red">
+        <caption>Registration Table</caption>
+        <tr>
+            <th>First Name</th>
+            <td>
+                <input type="text" id="fname">
+            </td>
+        </tr>
+        <tr>
+            <th>Last Name</th>
+            <td>
+                <input type="text" id="lname">
+            </td>
+        </tr>
+        <tr>
+            <th>User Name</th>
+            <td>
+                <input type="text" id="uname">
+            </td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>
+                <input type="email" id="email">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button id="btnclk">Click to Submit</button>
+            </td>
+        </tr>
+    </table>
+   </div>
+
+   <div id="mydiv"></div>
+<script>
+    $(document).ready(function(){
+        $("#btnclk").click(function(){
+            let fn = $("#fname").val();
+            $("#fname").val("");
+            let ln = $("#lname").val();
+            $("#lname").val("");
+            let un = $("#uname").val();
+            $("#uname").val("");
+            let e = $("#email").val();
+            $("#email").val("");
+            $("#mydiv").html("First Name is:"+fn+" <br>Last Name is: "+ln+" <br>User name is:"+un+" <br>email is:"+e);
+        })
+    })
+</script>
+</body>
+</html>
