@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-4.0.0.js"
+        integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+    <title>FAQ using JQuery</title>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 20px;
+    }
+
+    .faq{
+        margin-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 10px;
+    }
+
+    .faq h3{
+        cursor: pointer;
+        color: #007bff;
+        margin:0;
+    }
+
+    .faq p{
+        display:none;
+        margin:10px 0 0;
+    }
+</style>
+<body>
+    <h1>Frequently Asked Questions</h1>
+    <div class="faq">
+        <h3>What is JQuery</h3>
+        <p>
+            jQuery is a fast, lightweight JavaScript library that simplifies HTML document traversal, event handling,
+            and animations.
+            It lets you write less code to perform common tasks like selecting elements, handling events, and making
+            AJAX requests.
+        </p>
+    </div>
+    <div class="faq">
+        <h3>How Does slideUp work?</h3>
+        <p>
+           In jQuery, slideUp() is an animation method that gradually hides an element by reducing its height to 0, creating a “sliding up” effect. 
+        </p>
+    </div>
+     <div class="faq">
+        <h3>What is slideDown?</h3>
+        <p>
+           In jQuery, slideDown() is used to show a hidden element with a smooth downward sliding animation.
+        </p>
+    </div>
+    <script>
+        $(document).ready(function () {
+           $(".faq h3").on("click", function(){
+            const answer=$(this).next("p");
+
+            //slide up all answers except
+            $(".faq p").not(answer).slideUp();
+
+            //Toggle the current answer
+            answer.slideToggle();
+           })
+        })
+    </script>
+</body>
+
+</html>

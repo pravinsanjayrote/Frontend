@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-4.0.0.js"
+        integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+    <title>show_hide</title>
+</head>
+<body>
+   <div id="content">
+        Hello! This is a demo of hide and show methods in JQuery.
+   </div>
+   <div style="text-align: center">
+        <button id="hideButton">Hide</button>
+        <button id="showButton">Show</button>
+   </div>
+
+   <script>
+    $(document).ready(function(){
+        // Hide the content whent the "Hide" button is clicked
+        $("#hideButton").click(function(){
+            $("#content").hide();
+        })
+
+        // Show the content whent the "Show" button is clicked
+        $("#showButton").click(function(){
+            $("#content").show();
+        })
+    })
+   </script>
+</body>
+</html>
