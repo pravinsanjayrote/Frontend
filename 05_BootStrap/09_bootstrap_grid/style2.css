@@ -1,0 +1,35 @@
+.container{
+    border:0px solid red;
+}
+
+.row{
+    border:0px sollid blue;
+}
+
+.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-2{
+    border:0px solid black;
+}
+
+body{
+    background-color: black;
+}
+
+#header{
+    background-color: blueviolet;
+}
+
+#menu{
+    background-color: rgb(226, 216, 235);
+}
+
+#content{
+    background-color: rgb(84,112,32);
+}
+
+#sidebar{
+    background-color: rgb(104,19,47);
+}
+
+#footer{
+    background-color: rgb(20,228,100);
+}

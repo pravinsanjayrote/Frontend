@@ -1,0 +1,11 @@
+.container{
+    border: 5px solid black;
+}
+
+.nav-link{
+    color:black;
+}
+
+.nav-link:hover,nav-link:active{
+    background-color: rgb(117,228,163);
+}
