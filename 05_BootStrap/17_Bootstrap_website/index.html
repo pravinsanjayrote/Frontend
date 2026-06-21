@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+        integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#mynavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand ml-3" href="#">
+                    <span style="color:chartreuse"><b>CNCWEB WORLD</b></span>
+                </a>
+            </div>
+            <div class="collapse navbar-collpase" id="mynavbar">
+                <span class="navbar-toggler-icon"></span>
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="#" class="nav-link">HOME</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link">ABOUT US</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link">PRODUCTS</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link">TRAINING</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link">CONTACT US</a>
+                    </li>
+                </ul>
+                <UL class="nav navbar-nav navbar-light">
+                    <li>
+                        <a href="#"><span class="glyphicon glyphicon-user"></span>Sign Up</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="glyphicon glyphicon-log-in"></span>Login</a>
+                    </li>
+                </UL>
+                <form class="navbar-form navbar-right" action="#" method="post">
+                    <div class="input-group">
+                        <input type="search" class="form-control" placeholder="Search">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="search">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="text-success text-center">Contact Us</h1> <br>
+        <div class="col-lg-8 m-auto">
+            <form id="myform" action="#" class="bg-light" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" value="" name="name" placeholder="Full Name">
+                    <span id="username" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Id:</label>
+                    <input type="email" class="form-control" value="" name="email" placeholder="example@domain.com">
+                    <span id="emailid" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label for="Contact">Contact No.:</label>
+                    <input type="number" maxlenght="10" class="form-control" value="" name="phone"
+                        placeholder="Contact No.">
+                    <span id="phone no" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                    <label>Comments</label>
+                    <textarea class="form-control" name="comment" rows="5" style="resize: none;"></textarea>
+                    <span id="commentbox" class="text-danger font-weight-bold"></span>
+                </div>
+                <button type="submit" value="Submit" class="btn btn-success btn-lg">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#myform').bootstrapValidator({
+                feedbackIcons: {
+                    valid: 'glyphicon glyphicon-ok',
+                    invalid: 'glyphicon glyphicon-remove',
+                    validating: 'glyphicon glyphicon-refresh'
+                },
+                fields: {
+                    name: {
+                        validators: {
+                            stringLength: {
+                                min: 2,
+                            },
+                            notEmpty: {
+                                message: 'Please Enter your Name'
+                            }
+                        }
+                    },
+                    email: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Please Enter your Email Id'
+                            },
+                            emailAddress: {
+                                message: 'please Enter valid Email id'
+                            }
+                        }
+                    },
+                    phone: {
+                        validators: {
+                            notEmpty: {
+                                message: 'please Enter your phone number'
+                            },
+                            phone: {
+                                country: 'US',
+                                message: 'please Enter a valid phone number'
+                            }
+                        }
+                    },
+                    comment: {
+                        validators: {
+                            stringLength: {
+                                min: 10,
+                                max: 200,
+                                message: 'please Enter at least 10 chars and not more than 200'
+                            },
+                            notEmpty: {
+                                message: 'please enter comment'
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
