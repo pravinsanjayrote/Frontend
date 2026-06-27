@@ -1,0 +1,29 @@
+.mainDiv {
+  border: 10px solid rgb(222, 167, 18);
+  width: 300px;
+  margin: 10px;
+}
+
+.parentDiv {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.heading {
+  color: red;
+  background-color: black;
+  text-align: center;
+  height: 70px;
+  padding-top: 30px;
+  margin: 10px;
+}
+
+.myimg {
+  width: 100px;
+  margin:20px;
+}
+
+.personalDetail {
+  color: rgb(195, 5, 5);
+  background-color: rgb(157, 204, 103);
+}
